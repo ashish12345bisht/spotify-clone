@@ -7,7 +7,7 @@ import {BsThreeDots} from 'react-icons/bs'
 import SongRow from './SongRow'
 
 function Body({spotify}) {
-    const [{discover_weekly},dispatch] = useDataLayerValue();
+    const [{discover_weekly}] = useDataLayerValue();
     console.log(discover_weekly);
     return (
         <div className="body">
@@ -15,7 +15,7 @@ function Body({spotify}) {
             <div className="body-info">
                 <img
                     src={discover_weekly?.images[0].url}
-                    alt="image"
+                    alt={discover_weekly?.name}
                 />
                 <div className="body-info-text">
                     <strong>PLAYLIST</strong>

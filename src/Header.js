@@ -4,7 +4,7 @@ import {AiOutlineSearch} from 'react-icons/ai'
 import { useDataLayerValue } from './DataLayer'
 
 function Header() {
-    const [{user},dispatch] = useDataLayerValue();
+    const [{user}] = useDataLayerValue();
     return (
         <div className="header">
             <div className="header-left">
