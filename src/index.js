@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { DataLayer } from './DataLayer';
+import reducer, { initialState } from './reducer';
 import reportWebVitals from './reportWebVitals';
-
+//cf373ce5ea9b4a12b262707542a56a7f-client ID of spotify
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DataLayer initialState={initialState} reducer={reducer}>
+      <App />
+    </DataLayer>
   </React.StrictMode>,
   document.getElementById('root')
 );
